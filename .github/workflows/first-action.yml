@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print step for test
+        # Le pipe permet de cumuler plusieurs commandes
         run: |
           echo "Hello world!"
           echo "Bonjour Alice :)"
