@@ -10,9 +10,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Chemin
-        run: pwd
       - name: Install
-        run: npm install
+        run: |
+          cd react-app
+          npm install
+        working-directory: react-app
       - name: Test
         run: npm run test
