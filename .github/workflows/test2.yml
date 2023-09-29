@@ -1,0 +1,30 @@
+name:
+  Test Project React 2
+  # on permet de définir les évènements on: [push, workflow_dispatch]
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - hotfix-*'
+      - "feature/**"
+    paths-ignore:
+      - ".github/workflows/**"
+  # pull_request: pour code review lors des merges
+  pull_request:
+    types:
+      - opened
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code
+        uses: actions/checkout@v3
+      - name: Install Node v18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install
+        run: npm install
+      - name: Test
+        run: npm run test
