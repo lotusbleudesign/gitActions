@@ -15,7 +15,7 @@ jobs:
           node-version: 18
       - name: Install
         run: |
-          cd gitActions/react-app
+          cd ../react-app
           npm install
       - name: Test
         run: npm run test
