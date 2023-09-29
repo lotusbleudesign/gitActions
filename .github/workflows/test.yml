@@ -16,7 +16,7 @@ jobs:
       - name: Install
         run: |
           cd react-app
-          pwd
+          npm install
         working-directory: gitActions
       - name: Test
         run: npm run test
