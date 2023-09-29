@@ -1,4 +1,6 @@
-name: Test Project React 2
+name:
+  Test Project React 2
+  # on permet de définir les évènements
 on:
   push:
     branches:
